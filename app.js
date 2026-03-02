@@ -1,8 +1,13 @@
 function login(user) {
-    if (user.role === "student") {
-        return "Welcome Student";
+    if (user.type === "student") {
+        return "Student Portal";
     }
-    return "Access Denied";
+
+    if (user.type === "teacher") {
+        return "Teacher Portal";
+    }
+
+    return "No Access";
 }
 
 module.exports = login;
